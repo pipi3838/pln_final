@@ -1,0 +1,20 @@
+main:
+    saved_dir: '/nfs/nas-5.1/wbcheng/nlp_final/model/xlnet-cased'
+
+data:
+    basepath: '/nfs/nas-5.1/wbcheng/nlp_final/'
+    kwargs:
+        max_length: 128
+
+model:
+    name: 'xlnet-cased'
+    model_type: 'xlnet'
+    pretrain_weight: 'xlnet-base-cased'
+    batch_size: 16
+    epochs: 10
+    pos_weight: 0.1
+
+optimizer:
+    name: 'AdamW'
+    kwargs:
+        lr: 2e-5
